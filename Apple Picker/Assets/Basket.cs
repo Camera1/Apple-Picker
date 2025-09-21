@@ -40,13 +40,16 @@ public class Basket : MonoBehaviour
         GameObject collideWith = coll.gameObject;
         if(collideWith.CompareTag("Apple")){
             numApples++;
-            if(numApples == 5){
-                roundCounter.round += 1;
-            } else if(numApples == 10){
-                roundCounter.round += 1;
-            } else if(numApples == 15){
-                roundCounter.round += 1;
+            if(roundCounter.round < 4){
+                if(numApples == 5){
+                    roundCounter.round += 1;
+                } else if(numApples == 10){
+                    roundCounter.round += 1;
+                } else if(numApples == 15){
+                    roundCounter.round += 1;
+                }
             }
+            
             Destroy(collideWith);
             scoreCounter.score += 100;
             HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);

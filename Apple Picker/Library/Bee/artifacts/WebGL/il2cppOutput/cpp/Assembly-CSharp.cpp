@@ -8626,110 +8626,119 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Basket_OnCollisionEnter_m67BAC0C67DF584C
 		L_3 = GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5(L_2, _stringLiteral27862913227F95E01CAC52A0248569DAB0AFDD35, NULL);
 		if (!L_3)
 		{
-			goto IL_00aa;
+			goto IL_00b8;
 		}
 	}
 	{
 		// numApples++;
 		int32_t L_4 = __this->___numApples_6;
 		__this->___numApples_6 = ((int32_t)il2cpp_codegen_add(L_4, 1));
-		// if(numApples == 5){
-		int32_t L_5 = __this->___numApples_6;
-		if ((!(((uint32_t)L_5) == ((uint32_t)5))))
+		// if(roundCounter.round < 4){
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_5 = __this->___roundCounter_5;
+		int32_t L_6 = L_5->___round_4;
+		if ((((int32_t)L_6) >= ((int32_t)4)))
 		{
-			goto IL_0043;
+			goto IL_008d;
+		}
+	}
+	{
+		// if(numApples == 5){
+		int32_t L_7 = __this->___numApples_6;
+		if ((!(((uint32_t)L_7) == ((uint32_t)5))))
+		{
+			goto IL_0051;
 		}
 	}
 	{
 		// roundCounter.round += 1;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_6 = __this->___roundCounter_5;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_7 = L_6;
-		int32_t L_8 = L_7->___round_4;
-		L_7->___round_4 = ((int32_t)il2cpp_codegen_add(L_8, 1));
-		goto IL_007f;
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_8 = __this->___roundCounter_5;
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_9 = L_8;
+		int32_t L_10 = L_9->___round_4;
+		L_9->___round_4 = ((int32_t)il2cpp_codegen_add(L_10, 1));
+		goto IL_008d;
 	}
 
-IL_0043:
+IL_0051:
 	{
 		// } else if(numApples == 10){
-		int32_t L_9 = __this->___numApples_6;
-		if ((!(((uint32_t)L_9) == ((uint32_t)((int32_t)10)))))
+		int32_t L_11 = __this->___numApples_6;
+		if ((!(((uint32_t)L_11) == ((uint32_t)((int32_t)10)))))
 		{
-			goto IL_0062;
+			goto IL_0070;
 		}
 	}
 	{
 		// roundCounter.round += 1;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_10 = __this->___roundCounter_5;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_11 = L_10;
-		int32_t L_12 = L_11->___round_4;
-		L_11->___round_4 = ((int32_t)il2cpp_codegen_add(L_12, 1));
-		goto IL_007f;
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_12 = __this->___roundCounter_5;
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_13 = L_12;
+		int32_t L_14 = L_13->___round_4;
+		L_13->___round_4 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+		goto IL_008d;
 	}
 
-IL_0062:
+IL_0070:
 	{
 		// } else if(numApples == 15){
-		int32_t L_13 = __this->___numApples_6;
-		if ((!(((uint32_t)L_13) == ((uint32_t)((int32_t)15)))))
+		int32_t L_15 = __this->___numApples_6;
+		if ((!(((uint32_t)L_15) == ((uint32_t)((int32_t)15)))))
 		{
-			goto IL_007f;
+			goto IL_008d;
 		}
 	}
 	{
 		// roundCounter.round += 1;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_14 = __this->___roundCounter_5;
-		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_15 = L_14;
-		int32_t L_16 = L_15->___round_4;
-		L_15->___round_4 = ((int32_t)il2cpp_codegen_add(L_16, 1));
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_16 = __this->___roundCounter_5;
+		Round_tEA864DAF7343EB00C00D4FF65D2FB635B5FBB03C* L_17 = L_16;
+		int32_t L_18 = L_17->___round_4;
+		L_17->___round_4 = ((int32_t)il2cpp_codegen_add(L_18, 1));
 	}
 
-IL_007f:
+IL_008d:
 	{
 		// Destroy(collideWith);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = V_0;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_17, NULL);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_19, NULL);
 		// scoreCounter.score += 100;
-		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_18 = __this->___scoreCounter_4;
-		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_19 = L_18;
-		int32_t L_20 = L_19->___score_4;
-		L_19->___score_4 = ((int32_t)il2cpp_codegen_add(L_20, ((int32_t)100)));
-		// HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
-		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_21 = __this->___scoreCounter_4;
+		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_20 = __this->___scoreCounter_4;
+		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_21 = L_20;
 		int32_t L_22 = L_21->___score_4;
+		L_21->___score_4 = ((int32_t)il2cpp_codegen_add(L_22, ((int32_t)100)));
+		// HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
+		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_23 = __this->___scoreCounter_4;
+		int32_t L_24 = L_23->___score_4;
 		il2cpp_codegen_runtime_class_init_inline(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A_il2cpp_TypeInfo_var);
-		HighScore_TRY_SET_HIGH_SCORE_m7162A2B211CECC040083B083F24A5190A26E0C05(L_22, NULL);
+		HighScore_TRY_SET_HIGH_SCORE_m7162A2B211CECC040083B083F24A5190A26E0C05(L_24, NULL);
 		return;
 	}
 
-IL_00aa:
+IL_00b8:
 	{
 		// } else if(collideWith.CompareTag("Branch")){
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = V_0;
-		bool L_24;
-		L_24 = GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5(L_23, _stringLiteral1E77C8D5904D216C0CB266860238E3274F6A9750, NULL);
-		if (!L_24)
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = V_0;
+		bool L_26;
+		L_26 = GameObject_CompareTag_m6378BE50D009A93D46036F74CC3F7E2ECB0636E5(L_25, _stringLiteral1E77C8D5904D216C0CB266860238E3274F6A9750, NULL);
+		if (!L_26)
 		{
-			goto IL_00d7;
+			goto IL_00e5;
 		}
 	}
 	{
 		// Destroy(collideWith);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = V_0;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_25, NULL);
+		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_27, NULL);
 		// HighScore.TRY_SET_HIGH_SCORE(scoreCounter.score);
-		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_26 = __this->___scoreCounter_4;
-		int32_t L_27 = L_26->___score_4;
+		ScoreCounter_t7270E3D1A8B9BB1B73CBD594EDC0B3952E40F1C2* L_28 = __this->___scoreCounter_4;
+		int32_t L_29 = L_28->___score_4;
 		il2cpp_codegen_runtime_class_init_inline(HighScore_tAB53E25EE211F5AF017E511C8EC1B10EDC12DC7A_il2cpp_TypeInfo_var);
-		HighScore_TRY_SET_HIGH_SCORE_m7162A2B211CECC040083B083F24A5190A26E0C05(L_27, NULL);
+		HighScore_TRY_SET_HIGH_SCORE_m7162A2B211CECC040083B083F24A5190A26E0C05(L_29, NULL);
 		// SceneManager.LoadScene("GameOver");
 		il2cpp_codegen_runtime_class_init_inline(SceneManager_tA0EF56A88ACA4A15731AF7FDC10A869FA4C698FA_il2cpp_TypeInfo_var);
 		SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E(_stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7, NULL);
 	}
 
-IL_00d7:
+IL_00e5:
 	{
 		// }
 		return;

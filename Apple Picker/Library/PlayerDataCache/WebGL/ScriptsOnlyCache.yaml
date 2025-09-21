@@ -1318,4 +1318,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/GameOver.unity
-  playerPath: C:/Users/bryce/Apple-Picker/Apple Picker/Builds
+  playerPath: C:/Users/bryce/ApplePickerBuilds
